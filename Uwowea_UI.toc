@@ -27,6 +27,7 @@ Widgets\Button.lua
 
 Widgets\Settings\Settings.lua
 Widgets\Settings\Dropdown.lua
+Widgets\Settings\Slider.lua
 
 
 Window\Window.lua
