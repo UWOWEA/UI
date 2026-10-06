@@ -23,6 +23,7 @@ Widgets\Widgets.lua
 Widgets\Checkbox.lua
 Widgets\CloseButton.lua
 Widgets\Slider.lua
+Widgets\Button.lua
 
 
 Window\Window.lua
