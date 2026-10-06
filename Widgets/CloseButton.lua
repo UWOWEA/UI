@@ -2,7 +2,7 @@
 ---@param parent Frame
 ---@param callback function|nil
 ---@return Button
-function UI.CreateCloseButton(parent, callback)
+function UI.Widgets:CreateCloseButton(parent, callback)
     local closeButton = CreateFrame("Button", nil, parent, "UIPanelCloseButton")
     closeButton:SetPoint("TOPRIGHT", parent, "TOPRIGHT", 0, 0)
     closeButton:SetScript("OnClick", function()

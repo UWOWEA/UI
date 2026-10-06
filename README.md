@@ -16,11 +16,11 @@ The addon currently provides helpers for creating a checkbox and a close button.
 
 ## Usage
 
-The addon exposes its helpers on the global `UI` table. Load this addon before
-using them from another addon.
+The addon exposes widget helpers on the global `UI.Widgets` table. Load this
+addon before using them from another addon.
 
 ```lua
-local checkbox = UI.CreateCheckboxButton(
+local checkbox = UI.Widgets:CreateCheckboxButton(
     "MyAddonOption",
     parentFrame,
     "Enable option",
@@ -30,20 +30,20 @@ local checkbox = UI.CreateCheckboxButton(
     end
 )
 
-local closeButton = UI.CreateCloseButton(parentFrame, function()
+local closeButton = UI.Widgets:CreateCloseButton(parentFrame, function()
     -- Optional work to do when the close button is clicked.
 end)
 ```
 
 ## API
 
-### `UI.CreateCheckboxButton(name, parent, labelText, defaultVal, callback)`
+### `UI.Widgets:CreateCheckboxButton(name, parent, labelText, defaultVal, callback)`
 
 Creates a checkbox using `OptionsBaseCheckButtonTemplate`, adds a text label,
 and returns the `CheckButton`. `callback` is called with the checkbox's new
 checked value after a click, provided the checkbox is visible.
 
-### `UI.CreateCloseButton(parent, callback)`
+### `UI.Widgets:CreateCloseButton(parent, callback)`
 
 Creates a close button using `UIPanelCloseButton` and returns the `Button`.
 When clicked, it plays the standard main-menu close sound, invokes the optional

@@ -5,7 +5,7 @@
 ---@param defaultVal boolean
 ---@param callback function (checked)
 ---@return CheckButton
-function UI.CreateCheckboxButton(name, parent, labelText, defaultVal, callback)
+function UI.Widgets:CreateCheckboxButton(name, parent, labelText, defaultVal, callback)
     local checkBox = CreateFrame("CheckButton", name, parent, "OptionsBaseCheckButtonTemplate")
     checkBox:SetChecked(defaultVal)
 
