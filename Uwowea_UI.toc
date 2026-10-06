@@ -25,6 +25,9 @@ Widgets\CloseButton.lua
 Widgets\Slider.lua
 Widgets\Button.lua
 
+Widgets\Settings\Settings.lua
+Widgets\Settings\Dropdown.lua
+
 
 Window\Window.lua
 Window\Title.lua
