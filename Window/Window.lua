@@ -1,1 +1,1 @@
-UI.Window = {}
+UI.Window = UI.Window or {}

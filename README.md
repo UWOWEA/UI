@@ -118,3 +118,20 @@ When clicked, it plays the standard main-menu close sound, invokes the optional
 `Uwowea_UI.toc` is the addon manifest and lists the Lua files loaded by WoW.
 Add new runtime files to that manifest in the order required by their
 dependencies.
+
+### LuaLS type information in consuming addons
+
+To make the `UI` types available to LuaLS in another addon, add this UI
+project's path to that addon's `.luarc.json` under `workspace.library`. For
+example, use `"../UI"` when the addon and UI project are sibling directories.
+Add the path to the existing list rather than replacing other library paths.
+
+The UI project defines the global `UI` type in `UI.lua`, so consuming code can
+use the global directly:
+
+```lua
+local UI = _G["UI"]
+```
+
+Do not add `---@type UI` to this local alias; LuaLS can infer its type from the
+workspace definition.

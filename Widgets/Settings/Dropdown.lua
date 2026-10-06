@@ -5,7 +5,7 @@
 ---@param defaultValue string
 ---@param getValue fun(): string
 ---@param setValue fun(value: string)
----@param optionsList table[]
+---@param optionsList UI.Widgets.Settings.DropdownOption[]
 ---@return table
 function UI.Widgets.Settings:CreateDropdown(cat, variableKey, name, defaultValue, getValue, setValue, optionsList)
     local setting = Settings.RegisterProxySetting(cat, variableKey, Settings.VarType.String, name, defaultValue, getValue, setValue)

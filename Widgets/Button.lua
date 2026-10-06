@@ -1,7 +1,7 @@
 ---@param name string
 ---@param parent Frame
 ---@param labelText string
----@param callback function
+---@param callback fun()
 ---@return Button
 function UI.Widgets:CreateSubmitButton(name, parent, labelText, callback)
     local button = CreateFrame('Button', name, parent, "UIPanelButtonTemplate")

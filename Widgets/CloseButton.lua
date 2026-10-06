@@ -1,6 +1,6 @@
 
 ---@param parent Frame
----@param callback function|nil
+---@param callback fun()|nil
 ---@return Button
 function UI.Widgets:CreateCloseButton(parent, callback)
     local closeButton = CreateFrame("Button", nil, parent, "UIPanelCloseButton")

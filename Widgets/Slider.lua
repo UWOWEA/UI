@@ -1,7 +1,3 @@
----@class SliderFrame : Frame, MinimalSliderWithSteppersTemplate
----@field Label FontString
-local sliderMixin
-
 ---@param name string
 ---@param parent Frame
 ---@param labelText string
@@ -9,8 +5,8 @@ local sliderMixin
 ---@param maxVal number
 ---@param stepSize number
 ---@param defaultVal number
----@param callback function
----@return SliderFrame
+---@param callback fun(value: number)
+---@return UI.Widgets.SliderFrame
 function UI.Widgets:CreateSlider(name, parent, labelText, minVal, maxVal, stepSize, defaultVal, callback)
     local slider = CreateFrame("Frame", name, parent, "MinimalSliderWithSteppersTemplate")
 

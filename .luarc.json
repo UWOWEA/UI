@@ -6,7 +6,7 @@
         "Libs"
     ],
     "runtime.version": "Lua 5.1",
-    "hint.enable": false,
+    "hint.enable": true,
     "workspace.ignoreDir": [
         ".github",
         ".idea",
