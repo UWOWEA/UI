@@ -104,8 +104,25 @@ category label itself is not a selectable setting.
 ### `UI.Widgets:CreateCheckboxButton(name, parent, labelText, defaultVal, callback)`
 
 Creates a checkbox using `OptionsBaseCheckButtonTemplate`, adds a text label,
-and returns the `CheckButton`. `callback` is called with the checkbox's new
-checked value after a click, provided the checkbox is visible.
+and returns a `UI.Widgets.Checkbox` frame. Its `checkBox` and `Label` fields
+provide access to its child controls. `callback` is optional and is called
+with the checkbox's new checked value after a click, provided the checkbox is
+visible. It can also be set or replaced later:
+
+```lua
+local checkbox = UI.Widgets:CreateCheckboxButton(
+    "MyCheckbox",
+    parent,
+    "Enable feature",
+    false
+)
+
+checkbox:SetCallback(function(checked)
+    print("Enabled:", checked)
+end)
+```
+
+Pass `nil` to `SetCallback` to remove the callback.
 
 ### `UI.Widgets:CreateCloseButton(parent, callback)`
 
