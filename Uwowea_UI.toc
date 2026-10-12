@@ -14,10 +14,6 @@
 ## Category-zhTW: Uwowea
 ## X-Curse-Project-ID: 1728995
 
-
-#Mocks\Mocks.lua
-#Mocks\[Family]\Example.lua
-
 UI.lua
 Grid.lua
 Widgets\Widgets.lua
